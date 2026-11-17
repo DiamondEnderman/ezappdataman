@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ezappdataman"
+version = "1.0.0"
+description = "A lightweight, cross-platform APPDATA file and directory manager."
+readme = "README.md"
+authors = [{ name = "DiamondEnderman" }]
+
+requires-python = ">=3.11"
+
+dependencies = []
+
+[project.optional-dependencies]
+# Installable via: pip install appdata_manager[dev]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ezappdataman*"]
+exclude = ["unit_tests*", "temp*"]
